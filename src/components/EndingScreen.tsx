@@ -4,6 +4,7 @@ import { CoupleProfile, GameStats } from '../types/game';
 import { sound } from '../utils/audio';
 import { fireConfetti } from '../utils/confetti';
 import { DuduAvatar, BubuAvatar } from './BubuDuduAvatars';
+import { bubuDuduHug } from '../assets/images';
 
 interface EndingScreenProps {
   couple: CoupleProfile;
@@ -59,9 +60,8 @@ export const EndingScreen: React.FC<EndingScreenProps> = ({
       {/* Hero Victory Image featuring the authentic Bubu & Dudu Hug */}
       <div className="w-full max-w-sm rounded-3xl overflow-hidden border-4 border-white shadow-xl shadow-pink-200/50 mb-6 bg-gradient-to-b from-pink-100 to-rose-50 relative group">
         <img
-          src="/src/assets/images/bubu_dudu_hug_1790497172545.jpg"
+          src={bubuDuduHug}
           alt="一二和布布溫馨擁抱"
-          referrerPolicy="no-referrer"
           className="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 text-white text-left">

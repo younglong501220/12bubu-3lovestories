@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Heart, Sparkles } from 'lucide-react';
 import { CoupleProfile } from '../types/game';
+import { bubuDuduCover, bubuDuduCake, bubuDuduHug } from '../assets/images';
 
 interface MemoryAlbumModalProps {
   isOpen: boolean;
@@ -19,21 +20,21 @@ export const MemoryAlbumModal: React.FC<MemoryAlbumModalProps> = ({
     {
       title: '甜蜜下午茶·投餵洋芋片與珍奶',
       date: '照片回憶錄 · 甜蜜日常',
-      image: '/src/assets/images/bubu_dudu_cover_1790497156600.jpg',
+      image: bubuDuduCover,
       caption: `「${couple.character2Name}（布布）端著藍色碗，一片一片把香脆洋芋片餵進${couple.character1Name}（一二）的嘴裡；一二一邊吸著珍珠奶茶，開心地眼睛瞇成了彎月～」`,
       symbol: '🧋🥔',
     },
     {
       title: '溫暖的慶典·雙層草莓生日蛋糕',
       date: '照片回憶錄 · 紀念日',
-      image: '/src/assets/images/bubu_dudu_cake_1790497189009.jpg',
+      image: bubuDuduCake,
       caption: `「桌上擺著粉紅奶油的草莓雙層蛋糕，上面還有兩隻專屬的小偶人！${couple.character1Name}比著小樹杈手勢，${couple.character2Name}雙手合十祈許年年有今日～」`,
       symbol: '🎂✨',
     },
     {
       title: '世紀大和好·緊緊相擁的熊熊抱抱',
       date: '照片回憶錄 · 永遠相愛',
-      image: '/src/assets/images/bubu_dudu_hug_1790497172545.jpg',
+      image: bubuDuduHug,
       caption: `「小脾氣和生氣泡泡全都戳破消散啦！${couple.character2Name}張開溫暖的雙臂緊緊抱住${couple.character1Name}，『就算生氣也是最愛你，快抱緊我～』」`,
       symbol: '🫂❤️',
     },
@@ -70,7 +71,6 @@ export const MemoryAlbumModal: React.FC<MemoryAlbumModalProps> = ({
                 <img
                   src={memo.image}
                   alt={memo.title}
-                  referrerPolicy="no-referrer"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Heart, Sparkles, BookHeart, UserPen, Play } from 'lucide-react';
 import { CoupleProfile } from '../types/game';
 import { DuduAvatar, BubuAvatar } from './BubuDuduAvatars';
+import { bubuDuduCover } from '../assets/images';
 
 interface TitleMenuProps {
   couple: CoupleProfile;
@@ -39,9 +40,8 @@ export const TitleMenu: React.FC<TitleMenuProps> = ({
       {/* Hero Illustration Card featuring Bubu & Dudu */}
       <div className="w-full max-w-sm rounded-3xl overflow-hidden border-4 border-white shadow-xl shadow-pink-200/50 mb-6 bg-gradient-to-b from-pink-100 to-rose-50 relative group">
         <img
-          src="/src/assets/images/bubu_dudu_cover_1790497156600.jpg"
+          src={bubuDuduCover}
           alt="一二和布布甜蜜下午茶"
-          referrerPolicy="no-referrer"
           className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent p-4 text-white text-left">
